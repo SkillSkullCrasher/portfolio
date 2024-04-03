@@ -1,0 +1,882 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title> </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* overflow-x: hidden; */
+            
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            font-family: sans-serif;
+        }
+        header{
+            padding-top: 19px;
+            height: 65vh;
+            /* width: 100%; */
+            background-image: url(https://images.alphacoders.com/132/1322264.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.8;
+        }
+       header ul {
+            list-style-type: none;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            justify-content: center;
+            color: white;
+        }
+        header nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        header nav ul li a:hover{
+            color: lightgray;
+            border-bottom: 1px solid white;
+        }
+        nav li a {
+    transition: color 0.5s, border-bottom 4s;
+}
+        header  .links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20vh;
+            color: white;
+        }
+        .icons-links li a{
+            color: white;
+            width: 1rem;
+            padding: 8px;
+        }
+        .icons-links ul li{
+           display: flex;
+           gap: 15px;
+           border-radius: 50%;
+           width: max-content;
+          
+        }
+        .links p{
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1rem;
+        }
+        .icons-links li:hover{
+            box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+           
+        }
+        .about{
+            height:auto;
+            width:100%;
+            margin-bottom: 50px;
+           
+        }
+        .my-img{
+            height:12rem;
+            width: 12rem;
+            margin: auto;
+            margin-top: -8%;
+
+            position: relative;
+            /* max-zoom: 12px; */
+            /* background-position: center;
+            background-image: cover; */
+        }
+         .my-img img{
+            height: 100%;
+            width: 100%;
+            border-radius:70%;
+            border:3px solid white;
+          box-shadow: 1px 2px 10px 2px lightgray;
+          max-zoom: 12;
+            /* color: grey; */
+        }
+        .projects{
+            padding-top: 3%;
+            padding-bottom: 3%;
+            /* margin-bottom: 9%; */
+            
+            background-color: rgb(246, 244, 244);
+            height: auto;
+        }
+        .projects ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 30px;
+            list-style-type: none;
+
+            justify-content: center;
+            gap: 23px;
+        }
+        .projects li img{
+            height: 20rem;
+            width: 40rem;
+            opacity: 0.8;
+            cursor: pointer;
+            
+        }
+        .projects li img:hover {
+  /* opacity: 0.6; */
+  
+   box-shadow: 6px 6px 6px 4px rgba(34, 34, 34, 0.3);
+   
+}
+/* . */
+        /* .projects li img:hover::after{ */
+          /* opacity: 0.3; */
+          /* content: 'hello';
+          font-size: 90px;
+          color: black;
+          
+        } */
+        /* .portfolio{
+            padding-top: 3%;
+            background-color: rgb(246, 244, 244);
+        } */
+        .skills{
+            background-color: rgb(246, 244, 244);
+            /* height: 70%; */
+            width: 100%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            
+            /* text-align: center; */
+            
+           /* margin-top: 10px; */
+           
+            /* height: ;
+             */
+        }
+        .about-par{
+            padding:10px;
+            width: 70%;
+          
+            text-align: justify;
+            color: grey;
+            line-height: 28px;
+            font-size: 1.1rem;
+            margin: auto;
+            position: relative;
+            
+        }
+        .heading{
+            color: #2857a4;
+            text-align: center;
+            margin-bottom:50px ;
+            display: flex;
+            justify-content: center;
+            /* flex-direction: row; */
+            font-size: 30px;
+            gap:25px;
+            list-style-type: none;
+            
+        }
+        .content{
+            padding:10px;
+            width: 70%;
+          
+            text-align: justify;
+            color: white;
+            line-height: 28px;
+            font-size: 1.1rem;
+            margin: auto;
+            position: relative;
+            
+            /* justify-content: cente; */
+        }
+        .about span{
+            color: #2857a4;
+             font-weight: 600;
+        }
+        .content p{
+            font-size: 15px;
+            /* padding-bottom: 0; */
+        }
+       
+        .content ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            /* border-radius: 50%; */
+            /* text-align: center; */
+        }
+        .content ul .c p{
+            width: 8rem;
+            height: 2rem;
+            background-color: rgb(248, 118, 3); text-align: center;
+            color: white;
+            /* border-radius: 50%; */
+            
+
+        }
+        .content ul .html p{
+            width: 10rem;
+            height: 2rem;
+            background-color: #2857a4; text-align: center;
+           
+            color: white;
+            
+
+        }.content ul .css p{
+            width: 8rem;
+            height: 2rem;
+            background-color: #5597a2; text-align: center;
+             /* border-radius: 20%; */
+            color: white;
+            
+
+        }.content ul .java p{
+            width: 9rem;
+            height: 2rem;
+            background-color: #9857a4;
+            text-align: center;
+            color: white;
+            
+
+        }.content ul .dsa p{
+            text-align: center;
+            width: 8rem;
+            height: 2rem;
+            background-color: #313131;
+            text-align: center;
+            color: white;
+            
+
+        }
+        .content ul .python p{
+            width: 4rem;
+            height: 2rem;
+            background-color: #55af91;
+            text-align: center;
+            color: white;
+            
+
+        }.content ul .flutter p{
+            width: 8rem;
+            height: 2rem;
+            background-color: #c08888;
+            text-align: center;
+            color: white;
+            
+
+        }.content ul .frontened p{
+            width: 6rem;
+            height: 2rem;
+            background-color: #f76003;
+            text-align: center;
+           
+            color: white;
+            
+
+        }.content ul .backened p{
+            width: 5rem;
+            height: 2rem;
+            background-color: #7a94dc;
+            color: white;
+            
+
+        }
+        /* .skills */
+.content ul li{
+            text-decoration: none;
+            height: 2rem;
+            width: 10rem;
+            padding-left: 0;
+            border: 1px solid rgb(211, 207, 207);
+            border-radius: 50%;
+            background-color: rgb(211, 207, 207);
+            
+        }
+        .contact{
+            background:linear-gradient(#1b2323,#1a2d5d)
+            
+            
+        }
+        .box{
+            /* width: 70%; */
+            
+            display: flex;
+        }
+        .box .for{
+            width: 50%;
+            height: 90%;
+            /* display: fle; */
+            /* background-color: pink; */
+        }
+        .box .connect{
+            width: 50%;
+        }
+        .box .connect ul{
+            list-style-type: none;
+            font-size: 0.7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .for{
+            /* display: flex; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .for button{
+            background: transparent;
+            border:  2px solid rgb(214, 214, 214);
+            color: rgb(214, 214, 214);
+           padding: 6px;
+           font-size: 12px;
+           margin-top: 15px;
+           font-weight: 550;
+        }
+        
+         input{
+            width: 70%;
+            height: 3%;
+            color: white;
+            background:transparent;
+            padding: 2%;
+            font-size: 10px;
+            border: transparent;
+            margin-bottom: 12px;
+            border-bottom: 2px solid white;
+           height: 1rem;
+        }
+        .contact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            padding: 5%;
+        }
+        .contact li{
+            font-size: 10px;
+            color: rgb(214, 214, 214);
+        }
+        .last ul{
+            display: flex;
+            color: white;
+            justify-content: center;
+            margin-top: 60px;
+            list-style-type: none;
+            gap: 40px;
+            /* font-weight: 500px; */
+            /* text-decoration: none; */
+            
+        }
+        .last i{
+            font-size: 12px;
+            color: rgb(214, 214, 214);
+        }
+        .last i:hover{
+            box-shadow: 0px 0px 6px 4px rgba(186, 185, 185, 0.3);
+        }
+        
+        /* .education  {
+            /* display: flex; */
+            /* margin-top: 3%; */
+        /* } */ 
+        .education ul li{
+            /* display: flex; */
+            color: black;
+            background: none;
+            border: none;
+        }
+        .education .big{
+            text-align: end;
+            /* padding-left: 15%; */
+            /* align-items: center;
+            text-align: center; */
+            /* background-color: #7a94dc; */
+            margin: 3%;
+            margin-left: 20%;
+            margin-right: 20%;
+            
+        }
+        .education .big  ul{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: start; */
+            /* align-items: flex-end; */
+            list-style-type: none;
+
+        }
+        
+        /* .cott ul{
+            display: flex;
+        } */
+       
+        .cott ul li{
+
+            background: none;
+            border: none;
+            /* display: flex;
+            align-items: flex-end; */
+        }
+        .education{
+            /* height: 500px; */
+            width: 100%;
+            padding-top: 5%;
+            /* background-color: aqua; */
+        }
+        .cott{
+            width: 50%;
+            /* margin-left: 2%; */
+            /* background-color: #e3e8ef; */
+            border-right: 1px dotted blue;
+           
+            display: flex;
+            justify-content: end;
+            gap: 25%;
+            /* align-items: flex-end; */
+
+        }
+        .bott{
+            width: 50%;
+            margin-left: 50%;
+            /* background-color: #dce2ea; */
+           
+            display: flex;
+            justify-content: start;
+            border-left: 1px dotted blue;
+            gap: 15%;
+            
+            /* align-items: flex-end; */
+        }
+        .cott ul .high,.bott ul .high{
+            color: #2857a4;
+            font-size: 23px;
+            margin-bottom: 3%;
+        }
+        .cott ul .school,.bott ul .school{
+            color:rgb(248, 118, 3) ;
+            font-size: 15px;
+        }
+
+        .cott ul .year,.bott ul .year{
+            color:rgb(128, 127, 127) ;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .cott ul .agg,.bott ul .agg{
+            margin-top: 3%;
+            color:grey ;
+            font-size: 10px;
+            
+        }
+
+
+       
+        
+      
+
+       
+
+        
+        
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <nav >
+            <ul>
+                <li><a href="C:/Users/91730/OneDrive/Projects/portfolio.html"> Home</a>
+                </li>
+                <li><a href="C:/Users/91730/OneDrive/Projects/portfolio.html"> About</a>
+                </li>
+                <li><a href="#skills">Skills</a>
+                </li>
+                <li><a href="#education">Education</a>
+                </li>
+                
+                <li><a href="#portfolio">Projects</a>
+                </li>
+                <li><a href="#contact">Contact</a>
+                </li>
+<!--                 <li>Home
+                </li> -->
+                
+                
+            </ul>
+        </nav>
+        <div class="links">
+            <p><b>Anushka Jain</b></p><br>
+            <div class="icons-links">
+                <ul>
+                    <li>
+                       <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> <i class="far fa-envelope"></a></i>
+                    </li>
+                    <li>
+                        <a href="https://telegram.org/">    <i class="fab fa-telegram-plane"></i></a>
+                        </li>
+                  
+                    <li>
+                        <a href="https://www.linkedin.com/in/anushka-jain-8811a4253/"> <i class="fab fa-linkedin-in"></i></a>
+                     </li> 
+                 
+                    <li>
+                      <a href="https://github.com/SkillSkullCrasher?tab=repositories">    <i class="fab fa-github"></i></a>
+                    
+                    </li>
+                  
+                </ul><br>
+                <p style=" font-size: 12px; background-color: #848787; text-align: center;cursor: pointer;" ><b><a href="https://drive.google.com/drive/folders/10Du3dYoXURISG_r0MUw_Gva9pfVc6qJS?usp=drive_link" style="color: white; text-decoration: none;">Resume</a>
+                </b></p><br>
+           
+        </div>
+        </div>
+    </header>
+    <section class="about">
+    <div class="my-img">
+        <img src="C:\Users\91730\Downloads\ME.jpeg" alt="">
+   
+    </div><br>
+   <div class="about-par">
+    <p>
+        Motivated and enthusiastic Software Developer Intern with a <span>strong passion for learning </span>and gaining practical experience in software development. Currently pursuing <span>Bachelor's</span> in <span>Computer Science Engineering</span> with a solid foundation in <span>programming languages, algorithms, and data structures</span>. Eager to contribute to a dynamic team and apply theoretical knowledge in a professional setting. </p>
+</div>
+</section>
+
+<section class="skills" id="skills">
+    <div class="content">
+        <div class="heading">
+            <span class="fas fa-chalkboard-teacher"></span>
+
+        <span>SKILLS</span>
+    </div>
+        <ul>
+            <li class="c"><p>C++</p></li>
+            <!-- <li class="html"><p>HTML</p></li> -->
+           
+            <li class="java"><p> JAVA</p></li>
+            <li class="dsa"><p> DSA</p></li>
+            <li class="python"><p>Python</p></li>
+            <li class="flutter"><p>Oops</p></li>
+            <li class="frontened" "><p style=" background-color: palevioletred;width: 7rem;"> Node JS</p></li>
+
+            <li class="backened"><p>Flutter</p></li>
+            <li class="css"><p>MySQL</p></li>
+            <li class="frontened"><p>Swift</p></li>
+           
+            
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</section><br>
+
+
+
+<section class="education" id="education">
+    <div >
+        <div class="heading">
+            <span class="fas fa-graduation-cap"></span>
+
+        <span>Education</span>
+    </div>
+    <div class="big" >
+        
+        <ul>
+           <li >
+            <div class="cott">
+               
+                <span>
+                  <ul>
+                    <li class="high">
+                        Secondary Education (CBSE)
+                        
+                    </li>
+                    <li class="school">
+                        Lord Mahavira Academy, Saharanpur
+                    </li>
+                    <li class="year">
+                        2018-2019
+                    </li>
+                    <li class="agg">
+                        Aggregate: 86.5%
+                    </li>
+                 </ul>
+                </span>
+                <span class="fas fa-long-arrow-alt-left" style="color: #2857a4;font-size: 35px;"></span>
+            </div>
+           </li>
+           <li >
+            <div class="bott" id="education">
+                <span class="fas fa-long-arrow-alt-right" style="color: #2857a4;font-size: 35px;"></span>
+                <span>
+                <ul>
+                    <li class="high">
+                        	Higher Secondary Education (CBSE)
+                    </li>
+                    <li class="school">
+                        Lord Mahavira Academy, Saharanpur
+                    </li>
+                    <li class="year">
+                        2020-2021
+                    </li>
+                    <li class="agg">
+                        Aggregate:92%
+                    </li>
+                </ul>
+                </span>
+                <!-- <span class="fas fa-hand-point-left" style="color: #2857a4;font-size: 25px;"></span> -->
+            </div>
+           </li>
+
+           <li >
+            <div class="cott">
+                <span>
+                  <ul>
+                    <li class="high">
+                        Bachelor of Engineering (CSE)
+                    </li>
+                    <li class="school">
+                       Chitkara University, Rajpura, Punjab
+                    </li>
+                    <li class="year">
+                        2021-2025
+                    </li>
+                    <li class="agg">
+                        Aggregate:90.6% till 5th Semester
+                    </li>
+                </ul>
+                </span>
+                <span class="fas fa-long-arrow-alt-left" style="color: #2857a4;font-size: 35px;"></span>
+            </div>
+           </li>
+
+            
+            
+            
+            
+            
+            
+        </ul>
+       <!-- </div> -->
+    </div>
+</section><br>
+
+
+<section class="portfolio skills " id="portfolio" style="background-color: white;">
+    
+    <div class="projects ">
+        <div class="heading">
+           <span class="fas fa-project-diagram"></span>
+           
+
+
+        <span>PROJECTS</span></div>
+        <ul  style="">
+            <li style="background-color: white;border-color: white;" class="">
+                <img src="Assets/Online-Compiler_sc.png" style="width: 560; height: 315;opacity: 1;" alt="">
+                
+
+               
+                  <br>  <a href=" https://github.com/SkillSkullCrasher/Online-Java-Compiler" style="text-decoration: none; margin-left: 40%; color: #2857a4;">Online-JavaCompiler</a>
+            </li>
+            
+
+            <li style="background-color: white;border-color: white;" class="">
+                <img src="Assets/SnakeGame.png" style="width: 560; height: 315;opacity: 1;" alt="">
+                <br> <a href="  https://github.com/SkillSkullCrasher/SnakeGame" style="text-decoration: none; margin-left: 40%; color: #2857a4;">SnakeGame</a>
+           
+            </li>
+
+            <!-- <li style="background-color: white;border-color: white;" class="">
+                <video width="560" height="315" controls>
+                    <source src="Assets/t" type="video/mp4"> -->
+                    <!-- Your browser does not support the video tag. -->
+                  <!-- </video><br>  <a href="  https://github.com/SkillSkullCrasher/Text2Speech-Plus-Enhancing-Text-to-Speech-with-OCR" style="text-decoration: none; margin-left: 40%; color: #2857a4;">Text-Speech</a>
+           
+            
+               
+            </li> -->
+
+            <li style="background-color: white;border-color: white;" class="">
+                <img src="Assets/VokyToky Sc.png" style="width: 560; height: 315;" alt="">
+                <br>  <a href="  https://github.com/SkillSkullCrasher/VokiToki" style="text-decoration: none; margin-left: 40%; color: #2857a4;">VokiToki</a>
+                
+               
+            </li>
+
+        <li style="background-color: white;border-color: white;" class="">
+            <img src="Assets/Health-Diagnosis.png" style="width: 560; height: 315;opacity: 1;" alt="">
+            <br>  <a href=" https://github.com/SkillSkullCrasher/Health-Diagnosis-App" style="text-decoration: none; margin-left: 40%; color: #2857a4;">Health-Diagnosis</a>
+              
+           
+        </li>
+    
+        <!-- <li style="background-color: white;border-color: white;" class="">
+            <img src="Assets/Online-Compiler_sc.png" style="width: 560; height: 315;" alt="">
+            <br>  <a href=" " style="text-decoration: none; margin-left: 40%; color: #2857a4;">Trendy-Posts</a>
+          
+           
+       
+        </li> -->
+        <li style="background-color: white;border-color: white;" class="">
+            <img src="Assets/BookValt.png" style="width: 560; height: 315;" alt="">
+            <br>  <a href="   https://github.com/SkillSkullCrasher/BookValt     " style="text-decoration: none; margin-left: 40%; color: #2857a4;">BookValt</a>
+          
+           
+       
+         <!-- https://github.com/SkillSkullCrasher/BookValt      -->
+ </li>
+
+
+
+
+ <li style="background-color: white;border-color: white;" class="">
+    <img src="Assets/RepoRadar.png" style="width: 560; height: 315;" alt="">
+            <br> <a href="https://github.com/SkillSkullCrasher/RepoRadar" style="text-decoration: none; margin-left: 40%; color: #2857a4;">RepoRadar</a>
+     
+      
+  
+    <!-- https://github.com/SkillSkullCrasher/BookValt      -->
+</li>
+ <li style="background-color: white;border-color: white;" class="">
+    <img src="Assets/twillio.jpg" style="height: 123; width: auto;" alt="">
+            <br> <a href="https://github.com/SkillSkullCrasher/TwilioQuoteScheduler?tab=readme-ov-file" style="text-decoration: none;  color: #2857a4;">TwilioQuoteScheduler
+            </a>
+     
+      
+  
+    <!-- https://github.com/SkillSkullCrasher/BookValt      -->
+</li>
+
+
+
+
+
+
+            </ul>
+    </div>
+</section>
+<section class="contact " >
+    <div class="con " style="color: white;">
+        <div class="heading">
+           <span class="fas fa-handshake" style="color: white;"></span>
+            
+        <span style="color: white;">Contact</span>
+    </div>
+
+    <div class="box" id="contact">
+        <div class="for">
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+          
+                <input type="text" placeholder="Message"><br> <button type="submit" id="submit-button">SEND MESSAGE</button> 
+            
+            </form>
+            
+        </div>
+        <div class="connect">
+            <ul>
+                <li style="font-size: 13px;color: white;"><b>Get in touch</b></li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, iure dolor, incidunt cumque error dicta commodi ducimus nam quidem sapiente impedit rerum ad magnam eius maxime necessitatibus provident fugiat quaerat.</li>
+                <li style="font-size: 13px;color: white;"> <b>My Address</b></li>
+                <li style="display: flex; gap: 8px;">
+                    <span class="fas fa-home"></span>
+                  <span>  Jainbagh, Saharanpur (247001)</span>
+                </li>
+                <li style="display: flex; gap: 8px;">
+                    <span class="fas fa-phone"></span>
+                    <span> +91 7302416699</span>
+                </li>
+                <li style="display: flex; gap: 8px;">
+                    <span class="fas fa-envelope"></span>
+                    <span>anushkajaincoder8@gmail.com</span>
+                </li>
+            </ul>
+           
+
+        </div>
+       
+    </div>
+    <div class="last">
+            
+        <ul>
+            <li>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"> <i class="far fa-envelope" style="font-weight: 900;"></a></i>
+            </li>
+            <li>
+                <a href="https://telegram.org/">   <i class="fab fa-telegram-plane" style="font-weight: 900;"></i></a>
+                </li>
+            <!-- <li>
+                <a href="https://web.whatsapp.com/"> <i class="fab fa-whatsapp" style="font-weight: 900;"></i></a>
+            </li> -->
+            <li>
+                <a href="https://www.linkedin.com/in/anushka-jain-8811a4253/">  <i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/SkillSkullCrasher?tab=repositories">    <i class="fab fa-github"></i></a>
+              
+              </li>
+            <!-- <li></li> -->
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+
+
+</body>
+
+<script>
+    const form = document.getElementById("contact-form");
+const submitButton = document.getElementById("submit-button");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  const url = "anushkajain260@gmail.com";
+
+  fetch(url, {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      throw new Error("Message failed to send.");
+    }
+  })
+  .catch(error => {
+    console.error(error);
+    alert("Message failed to send.");
+  });
+});
+</script>
+
+</html>
+
+
